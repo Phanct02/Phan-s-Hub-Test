@@ -74,7 +74,7 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
         errorMessage.textContent = '';
         randomLineElement.textContent = getRandomLine();
     } else {
-        errorMessage.textContent = 'Input must be at least 7 characters long and contain both letters and numbers.';
+        errorMessage.textContent = 'Invailid Key Code.';
         randomLineElement.textContent = ''; // Clear random line if validation fails
     }
 });
