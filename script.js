@@ -28,5 +28,6 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
         document.getElementById('randomLine').textContent = getRandomLine();
     } else {
         errorMessage.textContent = 'Input must be at least 7 characters long and contain both letters and numbers.';
+        document.getElementById('randomLine').textContent = ''; // Clear random line if validation fails
     }
 });
