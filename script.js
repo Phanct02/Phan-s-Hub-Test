@@ -23,11 +23,13 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
     event.preventDefault();
     const userInput = document.getElementById('userInput').value;
     const errorMessage = document.getElementById('errorMessage');
+    const randomLineElement = document.getElementById('randomLine');
+
     if (validateInput(userInput)) {
         errorMessage.textContent = '';
-        document.getElementById('randomLine').textContent = getRandomLine();
+        randomLineElement.textContent = getRandomLine();
     } else {
         errorMessage.textContent = 'Input must be at least 7 characters long and contain both letters and numbers.';
-        document.getElementById('randomLine').textContent = ''; // Clear random line if validation fails
+        randomLineElement.textContent = ''; // Clear random line if validation fails
     }
 });
